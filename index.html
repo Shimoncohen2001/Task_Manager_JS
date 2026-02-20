@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js" defer></script>
+    <script src="script.js" defer></script>
+
+</head>
+
+<body>
+    <div class="frame">
+
+
+        <div class="tabs">
+            <button class="tab active">Personal</button>
+            <button class="tab ">Professional</button>
+        </div>
+
+        <div class="addRow">
+            <input type="text" placeholder="What do you need to do?">
+            <button onclick="addTask()" class="addBtn">ADD</button>
+        </div>
+
+        <div class="controls">
+            <select id="filterSelect" onchange="renderTasks(event)">
+                <option value="all">All</option>
+                <option value="completed">Completed</option>
+                <option value="active">Active</option>
+            </select>
+
+            <button class="sortBtn" onclick="sortTasks()">SORT</button>
+        </div>
+
+        <div class="card">
+            <ol></ol>
+            <button class="clearBtn" onclick="clearAll()">Clear Completed</button>
+        </div>
+    </div>
+</body>
+
+</html>
