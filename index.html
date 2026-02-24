@@ -16,8 +16,8 @@
 
 
         <div class="tabs">
-            <button class="tab active">Personal</button>
-            <button class="tab ">Professional</button>
+            <button class="tab active" onclick="persMode()">Personal</button>
+            <button class="tab" onclick="proMode()">Professional</button>
         </div>
 
         <div class="addRow">
@@ -32,12 +32,15 @@
                 <option value="active">Active</option>
             </select>
 
-            <button class="sortBtn" onclick="sortTasks()">SORT</button>
+            <select id="sortBtn" class="sortBtn" onchange="sortTasks(event)">
+                <option value="ascending">ascending</option>
+                <option value="descending">descending</option>
+            </select>
         </div>
 
         <div class="card">
             <ol></ol>
-            <button class="clearBtn" onclick="clearAll()">Clear Completed</button>
+            <button class="clearBtn" onclick="clearAll()"><strong>X</strong> Clear All</button>
         </div>
     </div>
 </body>
